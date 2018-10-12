@@ -152,42 +152,46 @@
 
 
 \begin{textblock}{6}(0.5, 0.2)
-\begin{flushleft}
-\hspace{13pt}
-\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-    \clip (600/2, 567/2) circle (567/2);
+  \begin{flushleft}
+  \hspace{13pt}
 
-        \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\givenprofilepic}};
-\end{tikzpicture}
+  \begin{tikzpicture}[x=0,y=0]
+  %\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+      \clip (600/2, 567/2) circle (567/2);
 
-{\Huge\color{mainblue}\givencvname}
+          \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\givenprofilepic}};
+  \end{tikzpicture}
 
-\begin{flushright}
-{\Large\color{black!80}\givencvjobtitle}
-\end{flushright}
-\renewcommand{\arraystretch}{1.6}
-\begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
-\ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\Large\icon{\Info}} & \givencvdate\\}
-\ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \givencvaddress\\}
-\ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \givennumberphone\\}
-\ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \givencvsite}\\
-\ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\givencvmail}}
-\end{tabular}
+  {\Huge\color{mainblue}\givencvname}
+
+  \begin{flushright}
+    {\Large\color{black!80}\givencvjobtitle}
+  \end{flushright}
+
+  \vspace{50pt}
+  
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
+    \ifthenelse{\equal{\givencvdate}		{}}{}{\textsc{\Large\icon{\Info}} 	& \givencvdate\\}
+    \ifthenelse{\equal{\givencvaddress}	{}}{}{\textsc{\Large\icon{\Letter}} 	& \givencvaddress\\}
+    \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}}	& \givennumberphone\\}
+    \ifthenelse{\equal{\givencvsite}		{}}{}{\textsc{\Large\icon{\Mundus}} 	& \givencvsite}\\	
+    \ifthenelse{\equal{\givencvmail}		{}}{}{\textsc{\large\icon{@}} 		& \givencvmail}
+  \end{tabular}
+
+  \vspace{50pt}
+  \profilesection{Sobre Mim}{3cm}
+  \givenaboutme
+
+  \vspace{50pt}
+  \profilesection{Habilidades}{2.6cm}
+  \givenskill
+  \giventextskill
+  \noindent
+  \scriptsize
 
 
-\profilesection{About me}{3.2cm}
-\givenaboutme
-
-
-\profilesection{Skill}{5cm}
-\givenskill
-\giventextskill
-\noindent
-\scriptsize
-\noindent
-(*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
-
-\end{flushleft}
+  \end{flushleft}
 \end{textblock}
 \vspace{-10pt}
  }
